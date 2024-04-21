@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: devops
+spec:
+  containers:
+    - name: signup
+      image: nginx
+      command: ["/bin/bash", "-c", "while true; do echo signup; sleep 3; done"]
+    - name: login
+      image: nginx
+      command: ["/bin/bash", "-c", "while true; do echo login; sleep 3; done"]
